@@ -1,0 +1,506 @@
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* CHARACTER */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.character {
+    width: 400px;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.character svg {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    pointer-events: auto;
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+#HEAD {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+
+    animation: headMove 4s ease-in-out infinite;
+}
+
+@keyframes headMove {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+
+#RIGHT-WITH-PENCIL {
+    transform-box: fill-box;
+    transform-origin: left center;
+
+    animation: rightHandMove 1.4s ease-in-out infinite;
+}
+
+@keyframes rightHandMove {
+    0% {
+        transform: rotate(2deg);
+
+    }
+
+    50% {
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform: rotate(-2deg);
+        transform: rotate(2deg);
+    }
+}
+
+
+/* =========================
+   LEFT HAND
+========================= */
+
+#LEFTHAND {
+    transform-box: fill-box;
+    transform-origin: 90% 10%;
+}
+
+@keyframes waveHand {
+
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    20% {
+        transform: translateX(-8px) rotate(-3deg);
+    }
+
+    40% {
+        transform: translateX(-14px) rotate(-5deg);
+    }
+
+    60% {
+        transform: translateX(12px) rotate(4deg);
+    }
+
+    80% {
+        transform: translateX(-6px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+}
+
+
+#HEAD.react {
+    animation: headReact 1.8s ease-in-out 2;
+    transform-box: fill-box;
+    transform-origin: center bottom;
+}
+
+#FACE.react {
+    animation: faceReact 1.7s ease-in-out 2;
+    transform-box: fill-box;
+    transform-origin: center bottom;
+}
+
+@keyframes headReact {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+@keyframes faceReact {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+
+    75% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform: translateX(-20px);
+    }
+
+}
+
+#FACE {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+
+    animation: faceMove 4s ease-in-out infinite;
+}
+
+@keyframes faceMove {
+
+    0% {
+        transform: rotate(0deg);
+        transform: translateX(-20px);
+    }
+
+    50% {
+        transform: rotate(6deg);
+        transform: translateX(20px);
+
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform: translateX(-20px);
+    }
+
+}
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* FURNITURE */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+.scene {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.furniture {
+    position: relative;
+    width: 104%;
+    left: -1%;
+    z-index: 2;
+    bottom: -175px;
+
+    pointer-events: none;
+}
+
+.furniture svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.character {
+    position: absolute;
+    width: 370px;
+    left: 50%;
+    bottom: 49px;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.character svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+
+#TREE1 {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+
+    animation: tree1move 4s ease-in-out infinite;
+}
+
+@keyframes tree1move {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+#TREE2 {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+
+    animation: tree2move 3s ease-in-out infinite;
+}
+
+@keyframes tree2move {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+
+#STAR {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: starPulse 2.2s ease-in-out infinite;
+}
+
+#HEART {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: heartPulse 2.6s ease-in-out infinite;
+}
+
+#SPIRAL {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: spiralPulse 2.3s ease-in-out infinite;
+}
+
+
+@keyframes starPulse {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+
+@keyframes spiralPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* TEXT */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.character-text {
+    position: absolute;
+
+    top: 460px;
+    left: 66%;
+
+    width: 220px;
+    height: 25px;
+
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    color: #111;
+
+    white-space: nowrap;
+
+    z-index: 10;
+    pointer-events: none;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#characterText {
+    animation: textFloat 2.5s ease-in-out infinite;
+}
+
+
+
+
+@keyframes textFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   PREFERENCE QUIZ BUTTON
+========================= */
+
+.quiz-button {
+    position: absolute;
+
+    top: 850px;
+    left: 233px;
+
+    padding: 25px 40px;
+
+    border: 3px solid #222;
+    border-radius: 999px;
+
+    background: #ffffff;
+    color: #222;
+
+    font-family: "Itim", "Comic Sans MS", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all 0.25s ease;
+
+    z-index: 10;
+}
+
+.quiz-button:hover {
+    background: #ffd000;
+
+    transform: translateY(-3px);
+
+    box-shadow: 3px 3px 0 #222;
+}

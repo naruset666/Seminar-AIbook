@@ -1,0 +1,155 @@
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+.login-box {
+    width: 360px;
+
+    text-align: center;
+}
+
+
+/* TITLE */
+
+.login-box h1 {
+    margin: 0;
+
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+
+    color: #222;
+
+    letter-spacing: -1px;
+}
+
+.login-subtitle {
+    margin: 8px 0 30px;
+
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: 15px;
+
+    color: #777;
+}
+
+
+/* INPUT */
+
+.input-group {
+    margin-bottom: 16px;
+
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+
+    margin: 0 0 7px 5px;
+
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: 13px;
+
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 14px 17px;
+
+    box-sizing: border-box;
+
+    border: 1.5px solid #222;
+    border-radius: 14px;
+
+    outline: none;
+
+    background: white;
+
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: 14px;
+
+    transition: 0.25s ease;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.input-group input:focus {
+    transform: translateY(-2px);
+
+    box-shadow: 3px 3px 0 #222;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-button {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border: 1.5px solid #222;
+    border-radius: 14px;
+
+    background: #222;
+    color: white;
+
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.login-button:hover {
+    background: white;
+    color: #222;
+
+    transform: translateY(-3px);
+
+    box-shadow: 4px 4px 0 #222;
+}
+
+
+/* REGISTER */
+
+.register-text {
+    margin-top: 25px;
+
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: 13px;
+
+    color: #888;
+}
+
+.register-text a {
+    margin-left: 4px;
+
+    color: #222;
+
+    font-weight: 600;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+
+    transition: 0.2s ease;
+}
+
+.register-text a:hover {
+    opacity: 0.5;
+}

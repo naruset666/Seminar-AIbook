@@ -1,0 +1,17 @@
+.reading-text {
+    position: absolute;
+
+    top: 21%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+    pointer-events: none;
+}
+
+.reading-text img {
+    display: block;
+    width: 870px;
+    height: auto;
+}
