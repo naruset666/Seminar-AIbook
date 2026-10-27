@@ -1,0 +1,13 @@
+﻿# downloads / leftovers, not part of the app
+*.zip
+Seminar-AIbook-main/
+คาเฟ่ยามเช้าnew/
+query
+TABLE - Copy.svg
+
+# raw recordings (web copies are in frontend/public/sounds)
+SOUND FOR AI BOOK/
+
+# never commit dependencies or secrets
+node_modules/
+.env

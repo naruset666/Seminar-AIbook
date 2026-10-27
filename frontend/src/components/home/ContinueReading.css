@@ -1,0 +1,136 @@
+.continue {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 40px 24px 120px;
+}
+
+.continue-title {
+  margin: 0 0 36px;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.continue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px 64px;
+}
+
+/* Card: cork board with the reading page pinned on it */
+
+.continue-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #222;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.continue-cork {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  justify-content: center;
+  padding-top: 34px;
+  overflow: hidden;
+  border: 6px solid #b5703d;
+  border-radius: 22px;
+  background: #c98e65;
+  box-shadow: 0 8px 0 rgba(120, 70, 30, 0.18);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.continue-card:hover .continue-cork,
+.continue-card:focus-visible .continue-cork {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 0 rgba(120, 70, 30, 0.2);
+}
+
+.continue-card:focus-visible {
+  outline: none;
+}
+
+.continue-paper {
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.continue-card:hover .continue-paper {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+.continue-pin {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #222;
+  border-radius: 50%;
+  background: #e05a4f;
+  transform: translateX(-50%);
+}
+
+.doc-thumb {
+  min-height: 380px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(60, 30, 10, 0.35);
+}
+
+.doc-thumb canvas {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.doc-thumb.ready canvas {
+  opacity: 1;
+}
+
+.continue-name {
+  margin: 18px 0 4px;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.continue-meta {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+}
+
+.continue-empty {
+  text-align: center;
+  color: #777;
+}
+
+.continue-start {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 22px;
+  border: 2px solid #222;
+  border-radius: 999px;
+  color: #222;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.continue-start:hover {
+  background: #ffd000;
+  box-shadow: 3px 3px 0 #222;
+}
+
+@media (max-width: 800px) {
+  .continue-grid {
+    grid-template-columns: 1fr;
+  }
+}

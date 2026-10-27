@@ -1,0 +1,54 @@
+/* Range slider in the site's ink style: thin dark track, round black thumb (yellow on hover). */
+.ink-range {
+  flex: 1;
+  min-width: 0;
+  height: 18px;
+  margin: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.ink-range::-webkit-slider-runnable-track {
+  height: 2px;
+  border-radius: 2px;
+  background: #222;
+}
+
+.ink-range::-moz-range-track {
+  height: 2px;
+  border-radius: 2px;
+  background: #222;
+}
+
+.ink-range::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+  margin-top: -6px;
+  border: none;
+  border-radius: 50%;
+  background: #222;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.ink-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: #222;
+}
+
+.ink-range:hover::-webkit-slider-thumb,
+.ink-range:focus-visible::-webkit-slider-thumb {
+  background: #ffd000;
+  box-shadow: 0 0 0 1.5px #222;
+  transform: scale(1.15);
+}
+
+.ink-range:focus {
+  outline: none;
+}

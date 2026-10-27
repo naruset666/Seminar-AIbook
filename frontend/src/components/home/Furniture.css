@@ -1,0 +1,54 @@
+.furniture {
+  position: relative;
+  width: 104%;
+  left: -1%;
+  bottom: -175px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.furniture svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Animated groups (ids come from furniture.svg) */
+
+#TREE1 {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: tree1move 4s ease-in-out infinite;
+}
+
+@keyframes tree1move {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-3deg); }
+}
+
+#TREE2 {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: tree2move 3s ease-in-out infinite;
+}
+
+@keyframes tree2move {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+#STAR,
+#HEART,
+#SPIRAL {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#STAR { animation: pulse 2.2s ease-in-out infinite; }
+#HEART { animation: pulse 2.6s ease-in-out infinite; }
+#SPIRAL { animation: pulse 2.3s ease-in-out infinite; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(0.9); }
+  50% { transform: scale(1.2); }
+}

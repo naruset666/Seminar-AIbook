@@ -1,0 +1,88 @@
+.pane-header-row {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 6px;
+}
+
+/* Compact chip so it does not compete with the page for attention */
+.pane-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 4px 0 10px;
+  border: 1.5px solid #222;
+  border-radius: 999px;
+  background: rgba(255, 248, 230, 0.75);
+  font-size: 12px;
+  transition: background 0.15s ease;
+}
+
+.pane-header.active {
+  background: #fff8e6;
+  box-shadow: 1.5px 1.5px 0 #222;
+}
+
+.pane-label {
+  font-weight: 700;
+}
+
+.pane-header.active .pane-label::before {
+  content: "● ";
+  color: #e0a800;
+}
+
+.pane-page {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pane-page input {
+  width: 36px;
+  height: 20px;
+  border: 1.2px solid #222;
+  border-radius: 6px;
+  background: #ffffff;
+  font: inherit;
+  font-size: 12px;
+  text-align: center;
+  outline: none;
+}
+
+.pane-count {
+  margin-right: 4px;
+  color: #555;
+}
+
+.pane-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 8px;
+  border: 1.2px solid #222;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #222;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.pane-link svg {
+  width: 12px;
+  height: 12px;
+}
+
+.pane-link.on {
+  background: #ffd000;
+}
+
+.pane-link:hover {
+  box-shadow: 1.5px 1.5px 0 #222;
+}
+
+.pane-header:not(:has(.pane-page)) .pane-label {
+  margin-right: 2px;
+}

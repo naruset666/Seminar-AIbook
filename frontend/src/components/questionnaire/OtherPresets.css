@@ -1,0 +1,92 @@
+.other-presets {
+  margin-top: 18px;
+}
+
+.other-toggle {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #222;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: #ffd000;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.other-toggle:hover {
+  background: #fff7c7;
+}
+
+.other-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.other-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1.5px dashed #222;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.other-card.selected {
+  border-style: solid;
+  background: #fff7c7;
+  box-shadow: 3px 3px 0 #222;
+}
+
+.other-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.other-body h3 {
+  margin: 0;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.other-desc {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.other-layers {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.other-loading,
+.other-error {
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+}
+
+.other-error {
+  color: #b11;
+}
+
+@media (max-width: 600px) {
+  .other-card {
+    flex-wrap: wrap;
+  }
+
+  .other-card .result-select {
+    width: 100%;
+  }
+}

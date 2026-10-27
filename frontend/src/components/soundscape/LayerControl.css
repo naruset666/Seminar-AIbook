@@ -1,0 +1,110 @@
+.layer-control {
+  padding: 10px 0 12px;
+  border-bottom: 1px dashed #d8c7a6;
+  transition: opacity 0.2s ease;
+}
+
+.layer-control:last-child {
+  border-bottom: none;
+}
+
+.layer-control.off .layer-name,
+.layer-control.off .layer-slider {
+  opacity: 0.45;
+}
+
+.layer-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.layer-name {
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 16px;
+}
+
+.layer-toggle {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1.5px solid #222;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #222;
+  font-size: 9px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.layer-toggle[aria-pressed="false"] {
+  background: #ffd000;
+}
+
+.layer-toggle:hover {
+  box-shadow: 1.5px 1.5px 0 #222;
+}
+
+/* Sliders: thin dark track with a round black thumb */
+
+.layer-slider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 2px;
+}
+
+.layer-slider.pan {
+  margin-top: 4px;
+}
+
+.slider-icon,
+.slider-side {
+  width: 16px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Pan slider: a tick marks the exact centre (the thumb travels width − 14px,
+   so its centre position lines up with 50% of the track). */
+.pan-track {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.pan-track .ink-range {
+  position: relative;
+  z-index: 1;
+}
+
+.pan-track::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 12px;
+  border-radius: 1px;
+  background: #222;
+  transform: translate(-50%, -50%);
+}
+
+/* When centred the thumb sits on the tick; show it as a yellow dot */
+.pan-track.centered .ink-range::-webkit-slider-thumb {
+  background: #ffd000;
+  box-shadow: 0 0 0 1.5px #222;
+}
+
+.pan-track.centered .ink-range::-moz-range-thumb {
+  background: #ffd000;
+  box-shadow: 0 0 0 1.5px #222;
+}
