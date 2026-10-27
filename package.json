@@ -1,0 +1,12 @@
+{
+  "name": "reading-soundscape",
+  "private": true,
+  "description": "Root scripts for one-service deploys (Railway): build the frontend, then run migrations and the API, which also serves frontend/dist.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm ci --prefix backend && npm ci --include=dev --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run db:migrate --prefix backend && npm start --prefix backend"
+  }
+}
