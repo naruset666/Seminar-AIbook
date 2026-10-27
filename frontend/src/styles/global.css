@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #222;
+  font-family: "Comic Sans MS", "Trebuchet MS", "Itim", sans-serif;
+}

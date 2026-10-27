@@ -1,0 +1,83 @@
+.floating-menu {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 1000;
+}
+
+/* DROPDOWN */
+
+.floating-menu-dropdown {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 220px;
+  padding: 8px 0;
+  border: 2px solid #222;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 4px 4px 0 #222;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.2s ease;
+}
+
+.floating-menu-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-menu-brand {
+  margin: 4px 16px 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #242321;
+}
+
+.floating-menu-dropdown a,
+.floating-menu-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: #222;
+  font: inherit;
+  font-size: 15px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.floating-menu-dropdown a:hover,
+.floating-menu-dropdown button:hover {
+  background: #fff7c7;
+}
+
+.floating-menu-dropdown a.active {
+  font-weight: 600;
+}
+
+.floating-menu-dropdown a.active .floating-menu-icon {
+  background: #ffd000;
+}
+
+.floating-menu-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #222;
+  border-radius: 50%;
+  font-size: 12px;
+}

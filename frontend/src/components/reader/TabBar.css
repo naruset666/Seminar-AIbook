@@ -1,0 +1,91 @@
+.tab-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  min-height: 46px;
+  padding: 0 4px 0 64px; /* leave room for the polaroid pin */
+  overflow-x: auto;
+  overflow-y: hidden; /* tabs shift down a few px; never show a vertical scrollbar */
+  scrollbar-width: thin;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  flex: 0 1 220px;
+  min-width: 110px;
+  height: 38px;
+  border: 2px solid #222;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  background: #f3e3c3;
+  transform: translateY(4px);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.tab:hover {
+  transform: translateY(1px);
+}
+
+.tab.active {
+  background: #fff8e6;
+  transform: translateY(0);
+  box-shadow: 2px -2px 0 #222;
+}
+
+.tab-name {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0 4px 0 14px;
+  border: none;
+  background: transparent;
+  color: #222;
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.tab-close {
+  width: 26px;
+  height: 26px;
+  margin-right: 6px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #777;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.tab-close:hover {
+  background: #222;
+  color: #ffffff;
+}
+
+.tab-add {
+  flex-shrink: 0;
+  width: 38px;
+  height: 34px;
+  margin-bottom: 2px;
+  border: 2px solid #222;
+  border-radius: 10px;
+  background: #ffd000;
+  color: #222;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.tab-add:hover,
+.tab-add.active {
+  box-shadow: 2px 2px 0 #222;
+  transform: translateY(-2px);
+}

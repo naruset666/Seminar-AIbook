@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>แบบสอบถาม — หาสถานที่อ่านหนังสือที่ใช่สำหรับคุณ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+Thai:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">§</span><span class="brand-name">หาสถานที่อ่านหนังสือที่ใช่สำหรับคุณ</span></div>
+  <button class="theme-toggle" id="themeToggle" type="button"><span id="themeIcon">☀</span><span id="themeLabel">โหมดกลางวัน</span></button>
+</header>
+
+<div class="wrap">
+  <div class="card">
+    <div class="progress">
+      <span><i id="p1"></i></span><span><i id="p2"></i></span><span><i id="p3"></i></span><span><i id="p4"></i></span><span><i id="p5"></i></span><span><i id="p6"></i></span>
+    </div>
+
+    <div class="step active" data-step="1">
+      <p class="q-label">คำถามที่ 1 จาก 5 · ระดับเสียงรอบตัว</p>
+      <h2 class="q-title">ตอนอ่านหนังสือ คุณชอบให้รอบตัวมีเสียงมากแค่ไหน</h2>
+      <div class="options" data-q="1">
+        <button class="option" data-tags="เงียบ">
+          <span class="option-dot"></span>เงียบที่สุด ยิ่งไม่มีเสียงยิ่งดี
+        </button>
+        <button class="option" data-tags="กึ่งกลาง">
+          <span class="option-dot"></span>มีเสียงเบา ๆ เป็นพื้นหลังกำลังดี
+        </button>
+        <button class="option" data-tags="คึกคัก">
+          <span class="option-dot"></span>ชอบมีเสียงรอบตัวพอสมควร ช่วยให้ตื่นตัว
+        </button>
+      </div>
+      <p class="q-basis"><b>เหตุผลของคำถาม:</b> แต่ละคนต้องการระดับเสียงรอบตัวไม่เท่ากัน บางคนอ่านได้ดีในที่เงียบ บางคนต้องมีเสียงพื้นหลังจึงมีสมาธิ <span class="q-ref">Furnham &amp; Strbac (2002); Söderlund et al. (2007)</span></p>
+    </div>
+
+    <div class="step" data-step="2">
+      <p class="q-label">คำถามที่ 2 จาก 5 · ความไวต่อเสียงพูด</p>
+      <h2 class="q-title">ถ้าได้ยินคนพูดคุยกันแบบฟังรู้เรื่อง คุณเสียสมาธิในการอ่านแค่ไหน</h2>
+      <div class="options" data-q="2">
+        <button class="option" data-tags="ไม่มีเสียงพูด,เงียบ">
+          <span class="option-dot"></span>เสียสมาธิมาก อ่านต่อไม่ได้
+        </button>
+        <button class="option" data-tags="กึ่งกลาง">
+          <span class="option-dot"></span>รบกวนบ้าง ถ้าเสียงไม่ดังก็พอไหว
+        </button>
+        <button class="option" data-tags="มีเสียงพูด">
+          <span class="option-dot"></span>แทบไม่รบกวน รู้สึกเหมือนมีเพื่อนนั่งอ่านด้วย
+        </button>
+      </div>
+      <p class="q-basis"><b>เหตุผลของคำถาม:</b> เสียงพูดที่ฟังรู้เรื่องและเพลงที่มีเนื้อร้อง รบกวนความเข้าใจในการอ่านมากกว่าเสียงประเภทอื่น <span class="q-ref">Vasilev et al. (2018); Perham &amp; Currie (2014)</span></p>
+    </div>
+
+    <div class="step" data-step="3">
+      <p class="q-label">คำถามที่ 3 จาก 5 · ประเภทเสียงที่ชอบ</p>
+      <h2 class="q-title">เสียงแบบไหนที่ทำให้คุณรู้สึกผ่อนคลายที่สุด</h2>
+      <div class="options" data-q="3">
+        <button class="option" data-tags="น้ำ">
+          <span class="option-dot"></span>เสียงน้ำ (ฝน คลื่น ลำธาร)
+        </button>
+        <button class="option" data-tags="ธรรมชาติ">
+          <span class="option-dot"></span>เสียงธรรมชาติอื่น ๆ (นก แมลง ลม ใบไม้)
+        </button>
+        <button class="option" data-tags="ไฟ">
+          <span class="option-dot"></span>เสียงไฟปะทุในเตาผิง
+        </button>
+        <button class="option" data-tags="จังหวะสม่ำเสมอ">
+          <span class="option-dot"></span>เสียงจังหวะสม่ำเสมอ (ล้อรถไฟ พัดลม)
+        </button>
+        <button class="option" data-tags="ผู้คน">
+          <span class="option-dot"></span>เสียงผู้คนและกิจกรรมรอบตัว (แก้วกาแฟ ฝีเท้า)
+        </button>
+      </div>
+      <p class="q-basis"><b>เหตุผลของคำถาม:</b> เสียงแต่ละประเภทให้ความรู้สึกน่าฟัง (Pleasantness) ต่างกัน และเสียงธรรมชาติช่วยให้ร่างกายฟื้นตัวจากความเครียดได้เร็วกว่าเสียงจราจร <span class="q-ref">Axelsson et al. (2010); Alvarsson et al. (2010)</span></p>
+    </div>
+
+    <div class="step" data-step="4">
+      <p class="q-label">คำถามที่ 4 จาก 5 · ความเคลื่อนไหวของบรรยากาศ</p>
+      <h2 class="q-title">คุณอยากให้บรรยากาศรอบตัวเป็นแบบไหน</h2>
+      <div class="options" data-q="4">
+        <button class="option" data-tags="นิ่งสงบ">
+          <span class="option-dot"></span>นิ่ง สงบ แทบไม่มีอะไรเปลี่ยนแปลง
+        </button>
+        <button class="option" data-tags="เคลื่อนไหวเบา">
+          <span class="option-dot"></span>มีความเคลื่อนไหวเบา ๆ เป็นจังหวะ
+        </button>
+        <button class="option" data-tags="มีชีวิตชีวา">
+          <span class="option-dot"></span>มีชีวิตชีวา มีเรื่องราวเกิดขึ้นรอบตัว
+        </button>
+      </div>
+      <p class="q-basis"><b>เหตุผลของคำถาม:</b> ใช้มิติ Eventfulness ของ Circumplex Model ซึ่งวัดว่าผู้ฟังรับรู้บรรยากาศเสียงว่าสงบนิ่งหรือมีความเคลื่อนไหว ตามกรอบแนวคิด Soundscape <span class="q-ref">Axelsson et al. (2010); ISO 12913-1 (2014)</span></p>
+    </div>
+
+    <div class="step" data-step="5">
+      <p class="q-label">คำถามที่ 5 จาก 5 · ลักษณะงานอ่าน</p>
+      <h2 class="q-title">ส่วนใหญ่คุณอ่านหนังสือแบบไหน</h2>
+      <div class="options" data-q="5">
+        <button class="option" data-tags="เงียบ,ไม่มีเสียงพูด">
+          <span class="option-dot"></span>อ่านเชิงลึก ต้องทำความเข้าใจหรือจำ (ตำรา งานวิจัย)
+        </button>
+        <button class="option" data-tags="กึ่งกลาง">
+          <span class="option-dot"></span>อ่านทั่วไป (บทความ ข่าว สรุปเนื้อหา)
+        </button>
+        <button class="option" data-tags="ผ่อนคลาย">
+          <span class="option-dot"></span>อ่านเพื่อผ่อนคลาย (นิยาย การ์ตูน เรื่องสั้น)
+        </button>
+      </div>
+      <p class="q-basis"><b>เหตุผลของคำถาม:</b> เสียงพื้นหลังที่ดังหรือมีจังหวะเร็วลดความเข้าใจในการอ่าน การอ่านที่ต้องใช้สมาธิสูงจึงควรใช้เสียงที่เบาและไม่มีเสียงพูด <span class="q-ref">Thompson et al. (2012); Perham &amp; Currie (2014)</span></p>
+    </div>
+
+    <div class="step" data-step="6">
+      <p class="q-label">ผลวิเคราะห์จากคำตอบของคุณ</p>
+      <h2 class="q-title">สถานที่อ่านหนังสือที่เหมาะกับคุณ</h2>
+      <div class="result-list" id="resultList"></div>
+      <p class="result-note">ระบบจับคู่คำตอบทั้ง 5 ข้อกับลักษณะเสียงของแต่ละสถานที่ คำถามแต่ละข้อออกแบบจากแนวคิดในงานวิจัยด้านเสียงกับการอ่าน ส่วนเกณฑ์การจับคู่เป็นค่าเริ่มต้นที่ทีมผู้จัดทำกำหนด และจะปรับปรุงจากข้อมูลผู้ใช้จริงในระยะถัดไป</p>
+      <button class="btn-amber restart-btn" id="restartBtn" type="button">ทำแบบสอบถามใหม่</button>
+    </div>
+
+    <div class="nav" id="navRow">
+      <button class="btn-ghost" id="backBtn" type="button" disabled>ย้อนกลับ</button>
+      <button class="btn-amber" id="nextBtn" type="button" disabled>ถัดไป</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

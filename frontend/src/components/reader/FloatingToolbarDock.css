@@ -1,0 +1,107 @@
+.floating-dock {
+  position: fixed;
+  z-index: 20;
+  padding: 8px 10px;
+  border: 2px solid #222;
+  border-radius: 999px;
+  background: rgba(201, 142, 101, 0.92);
+  box-shadow: 4px 4px 0 #222;
+  backdrop-filter: blur(4px);
+}
+
+.floating-dock .viewer-toolbar {
+  flex-wrap: nowrap;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* Bottom dock: slides out of view until revealed */
+.floating-dock.dock-bottom,
+.floating-dock.dock-free,
+.floating-dock.dock-dragging {
+  width: max-content; /* a fixed box at left:50% would otherwise shrink and wrap its labels */
+  max-width: calc(100vw - 24px);
+}
+
+.floating-dock.dock-bottom {
+  left: 50%;
+  bottom: 16px;
+  transform: translate(-50%, calc(100% + 40px));
+  opacity: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.floating-dock.dock-bottom.shown {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+/* Docked vertically on a side */
+.floating-dock.dock-left,
+.floating-dock.dock-right {
+  top: 50%;
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  padding: 10px 6px;
+  border-radius: 28px;
+  transform: translateY(-50%);
+  scrollbar-width: none;
+}
+
+.floating-dock.dock-left {
+  left: 14px;
+}
+
+.floating-dock.dock-right {
+  right: 14px;
+}
+
+.floating-dock.dock-dragging {
+  opacity: 0.9;
+  cursor: grabbing;
+}
+
+/* Drag handle */
+.dock-grip {
+  width: 22px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+}
+
+.dock-grip span {
+  width: 3px;
+  height: 18px;
+  border-radius: 2px;
+  background: #fff8e6;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.dock-grip:hover {
+  background: rgba(255, 248, 230, 0.25);
+}
+
+.dock-dragging .dock-grip {
+  cursor: grabbing;
+}
+
+/* In the vertical layout the handle lies on its side */
+.viewer-toolbar.vertical .dock-grip {
+  width: 34px;
+  height: 22px;
+  flex-direction: column;
+}
+
+.viewer-toolbar.vertical .dock-grip span {
+  width: 18px;
+  height: 3px;
+}

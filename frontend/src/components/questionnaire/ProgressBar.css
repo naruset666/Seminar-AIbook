@@ -1,0 +1,18 @@
+.quiz-progress {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.quiz-progress span {
+  flex: 1;
+  height: 8px;
+  border: 1.5px solid #222;
+  border-radius: 999px;
+  background: #ffffff;
+  transition: background 0.3s ease;
+}
+
+.quiz-progress span.filled {
+  background: #ffd000;
+}

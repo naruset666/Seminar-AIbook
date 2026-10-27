@@ -1,0 +1,114 @@
+.home-page {
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* First screen: the character scene fills the viewport so the rest appears on scroll */
+.home-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 50px;
+}
+
+.scene {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.reading-text {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.reading-text img {
+  display: block;
+  width: 870px;
+  height: auto;
+}
+
+/* "Scroll down" hint under the desk: a bouncing chevron, hidden once the page scrolls */
+.scroll-hint {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  z-index: 20;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 2px solid #222;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #222;
+  cursor: pointer;
+  transform: translateX(-50%);
+  animation: hintBounce 1.6s ease-in-out infinite;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.scroll-hint:hover {
+  background: #ffd000;
+  box-shadow: 2px 2px 0 #222;
+}
+
+.scroll-hint.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes hintBounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint {
+    animation: none;
+  }
+}
+
+/* Questionnaire call to action (slides up on scroll) */
+.home-cta {
+  display: flex;
+  justify-content: center;
+  padding: 140px 24px 120px;
+}
+
+.quiz-button {
+  display: inline-block;
+  padding: 25px 40px;
+  border: 3px solid #222;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #222;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.quiz-button:hover {
+  background: #ffd000;
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 0 #222;
+}
+
+@media (max-width: 700px) {
+  .quiz-button {
+    font-size: 24px;
+    white-space: normal;
+    text-align: center;
+  }
+}

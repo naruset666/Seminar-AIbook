@@ -1,0 +1,21 @@
+.annotation-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none; /* "read" mode: scrolling and clicks go to the page */
+  mix-blend-mode: multiply; /* ink darkens the page like a real highlighter instead of covering text */
+}
+
+.annotation-layer:not(.tool-read) {
+  pointer-events: auto;
+  touch-action: none; /* draw with finger/pen instead of scrolling */
+}
+
+.annotation-layer.tool-pen,
+.annotation-layer.tool-highlight {
+  cursor: crosshair;
+}
+
+.annotation-layer.tool-eraser {
+  cursor: cell;
+}

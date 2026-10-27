@@ -1,0 +1,140 @@
+.quiz-page {
+  min-height: 100vh;
+  padding: 100px 16px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fafafa;
+}
+
+.quiz-intro {
+  width: 720px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.quiz-kicker {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 4px 14px;
+  border: 1.5px solid #222;
+  border-radius: 999px;
+  background: #ffd000;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.quiz-intro h1 {
+  margin: 0;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.quiz-card {
+  width: 720px;
+  max-width: 100%;
+  padding: 36px 42px;
+  border: 1.5px solid #222;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 6px 6px 0 #222;
+}
+
+/* NAVIGATION */
+
+.quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.quiz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 26px;
+  border: 1.5px solid #222;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.quiz-btn.primary {
+  background: #222;
+  color: #ffffff;
+}
+
+.quiz-btn.ghost {
+  background: #ffffff;
+  color: #222;
+}
+
+.quiz-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 #222;
+}
+
+.quiz-btn.primary:hover:not(:disabled) {
+  background: #ffd000;
+  color: #222;
+}
+
+.quiz-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.result-saved {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.result-saved a {
+  color: #222;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.result-note {
+  margin: 20px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #999;
+}
+
+/* Error box (same look as the auth forms) */
+
+.quiz-card .form-error {
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  border: 1.5px solid #d33;
+  border-radius: 12px;
+  background: #fff1f1;
+  color: #b11;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .quiz-intro h1 {
+    font-size: 26px;
+  }
+
+  .quiz-card {
+    padding: 26px 20px;
+    box-shadow: 4px 4px 0 #222;
+  }
+
+  .quiz-nav {
+    flex-direction: column-reverse;
+  }
+}

@@ -1,0 +1,105 @@
+/* Character placement */
+
+.character {
+  position: absolute;
+  width: 370px;
+  left: 50%;
+  bottom: 49px;
+  transform: translateX(-50%);
+  z-index: 1;
+  user-select: none;
+}
+
+.character svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Speech text */
+
+.character-text {
+  position: absolute;
+  top: 460px;
+  left: 66%;
+  width: 220px;
+  height: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #111;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: textFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes textFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Idle animations on SVG groups (ids come from character.svg) */
+
+#HEAD {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: headMove 4s ease-in-out infinite;
+}
+
+@keyframes headMove {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
+
+#FACE {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: faceMove 4s ease-in-out infinite;
+}
+
+@keyframes faceMove {
+  0%, 100% { transform: translateX(-20px); }
+  50% { transform: translateX(20px); }
+}
+
+#RIGHT-WITH-PENCIL {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: rightHandMove 1.4s ease-in-out infinite;
+}
+
+@keyframes rightHandMove {
+  0%, 100% { transform: rotate(2deg); }
+  50% { transform: translateX(-30px); }
+}
+
+#LEFTHAND {
+  transform-box: fill-box;
+  transform-origin: 90% 10%;
+}
+
+/* Click reaction */
+
+#HEAD.react {
+  animation: headReact 1.8s ease-in-out 2;
+}
+
+#FACE.react {
+  animation: faceReact 1.7s ease-in-out 2;
+}
+
+@keyframes headReact {
+  0%, 100% { transform: rotate(0deg); }
+  25%, 75% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes faceReact {
+  0% { transform: rotate(0deg); }
+  25%, 75% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+  100% { transform: translateX(-20px); }
+}

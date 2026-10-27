@@ -1,0 +1,76 @@
+/* reading-desk.svg is cropped to the desk (2481 × 738, ratio 3.36), so it only needs a width.
+   The width is also capped by the viewport height so the board keeps most of the screen. */
+.desk-frame {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 6px;
+  
+  overflow: hidden;
+}
+
+.desk-art {
+  width: min(960px, 78vw, calc(31vh * 3.36));
+}
+
+.desk-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: -555px;
+}
+
+/* Flower sways from the bottom of its stem, like the trees on the home page */
+#FLOWER1 {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: flowerSway 3.6s ease-in-out infinite;
+}
+
+@keyframes flowerSway {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* The speaker is the soundscape button: bounces when pointed at */
+#SPEKER1 {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  cursor: pointer;
+  outline: none;
+}
+
+#SPEKER1:hover,
+#SPEKER1:focus-visible {
+  animation: speakerBoing 0.7s ease-in-out infinite;
+}
+
+#SPEKER1:focus-visible {
+  filter: drop-shadow(0 0 10px #ffd000);
+}
+
+@keyframes speakerBoing {
+  0%, 100% { transform: translateY(0) scale(1, 1); }
+  20% { transform: translateY(0) scale(1.08, 0.88); }
+  45% { transform: translateY(-14%) scale(0.94, 1.08); }
+  70% { transform: translateY(0) scale(1.04, 0.95); }
+}
+
+/* Digital digits on the #CLOCK display (SVG user units: the display is 331 × 123) */
+.clock-digits {
+  fill: #fdfdfd;
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: 92px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  white-space: pre;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #FLOWER1,
+  #SPEKER1:hover,
+  #SPEKER1:focus-visible {
+    animation: none;
+  }
+}

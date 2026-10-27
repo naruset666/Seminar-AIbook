@@ -1,0 +1,22 @@
+.reading-room {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fffdf5;
+}
+
+.reading-board-area {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  padding: 14px 24px 0;
+}
+
+/* Keep the board clear of the top-right menu button on narrower screens. */
+@media (max-width: 1400px) {
+  .reading-board-area {
+    padding-right: 80px;
+  }
+}

@@ -1,0 +1,84 @@
+/* Square-ish icon buttons used across the reader toolbar */
+.toolbar-group .icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  min-width: 34px;
+  padding: 0;
+}
+
+.toolbar-group .icon-button.active {
+  border-color: #222;
+  background: #ffd000;
+}
+
+.toolbar-divider {
+  width: 1.5px;
+  height: 22px;
+  margin: 0 2px;
+  background: #d8c7a6;
+}
+
+.swatches {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 4px;
+}
+
+.toolbar-group .swatch {
+  width: 22px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 2px solid #222;
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+
+.toolbar-group .swatch:hover:not(:disabled) {
+  transform: scale(1.15);
+  border-color: #222;
+}
+
+.toolbar-group .swatch.selected {
+  box-shadow: 0 0 0 2px #fff8e6, 0 0 0 4px #222;
+}
+
+.toolbar-group .export-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-color: #222;
+  background: #222;
+  color: #fff8e6;
+  font-size: 13px;
+}
+
+.toolbar-group .export-button:hover:not(:disabled) {
+  background: #ffd000;
+  color: #222;
+}
+
+/* Vertical dock: stack swatches, icon-only export */
+.viewer-toolbar.vertical .swatches {
+  flex-direction: column;
+  padding: 4px 0;
+}
+
+.viewer-toolbar.vertical .toolbar-divider {
+  width: 22px;
+  height: 1.5px;
+  margin: 2px 0;
+}
+
+.viewer-toolbar.vertical .export-label {
+  display: none;
+}
+
+.viewer-toolbar.vertical .toolbar-group .export-button {
+  width: 34px;
+  padding: 0;
+  justify-content: center;
+}

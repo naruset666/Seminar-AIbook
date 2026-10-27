@@ -1,0 +1,151 @@
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.result-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px;
+  border: 1.5px solid #222;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.result-card.rank-1 {
+  background: #fff7c7;
+  box-shadow: 4px 4px 0 #222;
+}
+
+.result-rank {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #222;
+  border-radius: 50%;
+  background: #ffffff;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 20px;
+}
+
+.result-card.rank-1 .result-rank {
+  background: #ffd000;
+}
+
+.result-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.result-name {
+  margin: 0;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.result-badge {
+  padding: 2px 10px;
+  border: 1.5px solid #222;
+  border-radius: 999px;
+  background: #ffd000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.result-score {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #777;
+}
+
+.result-desc {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Which questionnaire dimensions matched */
+
+.result-why {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.result-why span {
+  padding: 3px 10px;
+  border: 1px dashed #bbb;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.result-why span.hit {
+  border: 1px solid #222;
+  background: #ffffff;
+  color: #222;
+}
+
+/* Select button */
+
+.result-select {
+  flex-shrink: 0;
+  align-self: center;
+  padding: 9px 16px;
+  border: 1.5px solid #222;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #222;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.result-select:hover:not(:disabled) {
+  background: #222;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 0 #222;
+}
+
+.result-select.selected {
+  background: #222;
+  color: #ffffff;
+  cursor: default;
+}
+
+.result-select:disabled:not(.selected) {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+@media (max-width: 600px) {
+  .result-card {
+    flex-wrap: wrap;
+  }
+
+  .result-select {
+    width: 100%;
+  }
+}

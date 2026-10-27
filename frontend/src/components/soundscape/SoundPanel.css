@@ -1,0 +1,207 @@
+.sound-panel {
+  width: 270px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 14px 16px 6px;
+  border: 2px solid #222;
+  border-radius: 16px;
+  background: #fff8e6;
+  box-shadow: 3px 3px 0 #222;
+}
+
+.sound-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.sound-head h2 {
+  margin: 0;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.sound-close {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid #222;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sound-close:hover {
+  background: #ffd000;
+}
+
+.sound-empty {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Preset picker */
+
+.sound-preset {
+  width: 100%;
+  height: 36px;
+  padding: 0 34px 0 14px;
+  border: 2px solid #222;
+  border-radius: 999px;
+  background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23222' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center;
+  font-family: "Itim", "Comic Sans MS", sans-serif;
+  font-size: 16px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.sound-preset:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 #222;
+}
+
+.sound-moods-link {
+  display: inline-block;
+  margin: 6px 0 0 6px;
+  color: #555;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sound-moods-link:hover {
+  color: #222;
+}
+
+/* Master controls */
+
+.sound-master {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 8px;
+}
+
+.sound-play {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border: 2px solid #222;
+  border-radius: 50%;
+  background: #ffd000;
+  color: #222;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #222;
+  transition: 0.15s ease;
+}
+
+.sound-play:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 #222;
+}
+
+.sound-play.playing {
+  background: #ffffff;
+}
+
+.sound-master-volume {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  color: #555;
+}
+
+.sound-master-volume input {
+  flex: none;
+  width: 100%;
+  margin: 0;
+}
+
+/* Options row: custom checkbox like the reference design */
+
+.sound-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 2px solid #222;
+}
+
+.sound-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sound-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sound-check-box {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #222;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.sound-check input:checked + .sound-check-box {
+  background: #222;
+}
+
+.sound-check input:checked + .sound-check-box::after {
+  content: "";
+  width: 5px;
+  height: 9px;
+  margin-top: -2px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.sound-check input:focus-visible + .sound-check-box {
+  box-shadow: 0 0 0 2px #ffd000;
+}
+
+.sound-reset {
+  padding: 3px 10px;
+  border: 1.5px solid #222;
+  border-radius: 999px;
+  background: #ffffff;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sound-reset:hover {
+  background: #ffd000;
+}
+
+/* Layer list scrolls inside the panel */
+
+.sound-layers {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  margin-right: -8px;
+  padding-right: 8px;
+  scrollbar-width: thin;
+}
